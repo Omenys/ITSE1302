@@ -1,2 +1,3 @@
 # ITSE1302
-Programming assignments 
+Introduction to Programming 
+Spring 2023
