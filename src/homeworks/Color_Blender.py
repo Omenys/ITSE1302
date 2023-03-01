@@ -15,10 +15,7 @@ result_colors = {
 
 # Intro statement to user
 print("Welcome to Color Blender!")
-
-# Instructions to user
-print("Discover the resulting color from the combination of two different primary colors: \n"
-        "\tred, blue, or yellow")
+print("Find out the resulting secondary color by blending two primary colors.")
 
 # Color variable assignment
 color_1 = "unknown"
@@ -28,7 +25,7 @@ color_2 = color_1
 valid_response = False
 while not valid_response:
     # First primary color input, converts string to lowercase
-    color_1 = input("Please input your first primary color: ").lower()
+    color_1 = input(f"Please input your first primary color. Options: {VALID_COLORS}: ").lower()
 
     # First primary color input error check
     if color_1 in VALID_COLORS:
@@ -36,11 +33,14 @@ while not valid_response:
     else:
         print("! Error !: The first color you entered is invalid.")
 
+# Remove the color first picked from the valid options.
+VALID_COLORS.remove(color_1)
+
 # Loop until valid input
 valid_response = False
 while not valid_response:
     # Second primary color input, converts string to lowercase
-    color_2 = input("Please input your second primary color: ").lower()
+    color_2 = input(f"Please input your second primary color. Options: {VALID_COLORS}: ").lower()
 
     # Second primary color input error check
     if color_2 == color_1:
@@ -51,9 +51,10 @@ while not valid_response:
         print("! Error !: The second color you entered is invalid.")
 
 # Print blended colors from dictionary 
-if color_1 and color_2 in result_colors["purple"]:
+if color_1 in result_colors["purple"] and color_2 in result_colors["purple"]:
     print("The blended color is purple!")
-elif color_1 and color_2 in result_colors["orange"]:
+elif color_1 in result_colors["orange"] and color_2 in result_colors["orange"]:
     print("The blended color is orange!")
-elif color_1 and color_2 in result_colors["green"]:
+elif color_1 in result_colors["green"] and color_2 in result_colors["green"]:
     print("The blended color is green!")
+
