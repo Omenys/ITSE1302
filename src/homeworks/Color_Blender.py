@@ -25,7 +25,7 @@ color_2 = color_1
 valid_response = False
 while not valid_response:
     # First primary color input, converts string to lowercase
-    color_1 = input(f"Please input your first primary color. Options: {VALID_COLORS}: ").lower()
+    color_1 = input(f"Please input your first primary color. Options: {VALID_COLORS}: ").lower().strip()
 
     # First primary color input error check
     if color_1 in VALID_COLORS:
@@ -33,14 +33,14 @@ while not valid_response:
     else:
         print("! Error !: The first color you entered is invalid.")
 
-# Remove the color first picked from the valid options.
+# Remove the color first picked from the valid options
 VALID_COLORS.remove(color_1)
 
 # Loop until valid input
 valid_response = False
 while not valid_response:
     # Second primary color input, converts string to lowercase
-    color_2 = input(f"Please input your second primary color. Options: {VALID_COLORS}: ").lower()
+    color_2 = input(f"Please input your second primary color. Options: {VALID_COLORS}: ").lower().strip()
 
     # Second primary color input error check
     if color_2 == color_1:
