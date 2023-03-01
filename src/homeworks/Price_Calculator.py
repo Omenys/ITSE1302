@@ -1,4 +1,4 @@
-#Chapter 2 Week 4 Assignment
+# Calculate total purchase price
 
 # Get user input on purchase amount
 user_input = float(input("Please enter the amount of your purchase in numeric format: $"))
