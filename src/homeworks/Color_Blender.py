@@ -12,7 +12,7 @@ result_colors = {
     "orange": {"red", "yellow"},
     "green": {"blue", "yellow"}
 }
-print(result_colors["purple"])
+
 # Intro statement to user
 print("Welcome to Color Blender!")
 
@@ -50,10 +50,10 @@ while not valid_response:
     else:
         print("! Error !: The second color you entered is invalid.")
 
-if color_1 and color_2 in purple:
+# Print blended colors from dictionary 
+if color_1 and color_2 in result_colors["purple"]:
     print("The blended color is purple!")
-elif color_1 and color_2 in orange:
+elif color_1 and color_2 in result_colors["orange"]:
     print("The blended color is orange!")
-elif color_1 and color_2 in green:
+elif color_1 and color_2 in result_colors["green"]:
     print("The blended color is green!")
-
