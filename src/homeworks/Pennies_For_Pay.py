@@ -4,13 +4,12 @@
 # Description: Calculate accumulated salary and display total amount in a table 
 
 
-# Instructions to user for input
+# Information for user
 print("Your salary is $0.01 on your first day of work.")
 print("Your salary will double each day.")
 
 # Loop until valid input
 valid_response = False
-
 while True:
     try:
         # Get total days worked
@@ -33,9 +32,10 @@ elif valid_response:
     total_pay = 0.00
     # Starting pay rate variable 
     current_pay = 0.01
-
-    for day in range(1, days_worked+1):
-        print(f"Day Worked: {day}, Salary: {current_pay}")
+    print("Days Worked \t Salary")
+    print("-----------------------")
+    for day in range(1, days_worked + 1):
+        print(day,'\t\t', f"${(format(current_pay, ',.2f'))}")
         total_pay += current_pay
         current_pay *= 2
-    print(f"Your total salary is ${total_pay:,.2f}.")
+    print(f"Your total pay is ${total_pay:,.2f}.")
